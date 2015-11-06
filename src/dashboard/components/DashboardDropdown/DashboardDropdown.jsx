@@ -21,6 +21,7 @@ class DashboardDropdown extends React.Component {
                     <p className="dashboard-toolbar__dropdown__text">user@email.com</p>
                     <a className="dashboard-toolbar__dropdown__link" href="#">Logout</a>
                 </div>
+                <div className="dashboard-toolbar__dropdown__arrow-up"></div>
             </div>
         );
     }

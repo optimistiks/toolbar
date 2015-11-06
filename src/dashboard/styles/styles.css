@@ -1,3 +1,5 @@
+/* toolbar */
+
 .dashboard-toolbar {
     height: 50px;
     line-height: 40px;
@@ -7,9 +9,13 @@
     position: relative;
 }
 
+/* toolbar logo */
+
 .dashboard-toolbar__logo {
     height: 100%;
 }
+
+/* toolbar icons and their modifiers */
 
 .dashboard-toolbar__icon {
     cursor: pointer;
@@ -28,14 +34,20 @@
     color: #5DABC6
 }
 
+/* groups of toolbar controls */
+
+.dashboard-toolbar__main-controls {
+    display: inline-block;
+    font-size: 1.5em;
+    height: 100%;
+    vertical-align: top;
+    margin-left: 10%;
+}
+
 .dashboard-toolbar__controls {
     float: right;
     font-size: 1.5em;
     height: 100%;
-}
-
-.dashboard-toolbar__main-controls {
-    display: inline-block;
 }
 
 .dashboard-toolbar__control-group {
@@ -45,6 +57,8 @@
     padding-left: 15px;
 }
 
+/* toolbar dropdown */
+
 .dashboard-toolbar__dropdown {
     position: absolute;
     right: 10px;
@@ -52,6 +66,7 @@
     top: 50px;
     line-height: 2em;
     box-shadow: 0 3px 6px rgba(49, 50, 51, 0.24);
+    border-radius: 5px;
 }
 
 .dashboard-toolbar__dropdown_visible_no {
@@ -65,3 +80,29 @@
 .dashboard-toolbar__dropdown__link:hover {
     color: #5DABC6
 }
+
+.dashboard-toolbar__dropdown__arrow-up {
+    width: 0;
+    height: 0;
+    border-left: 10px solid transparent;
+    border-right: 10px solid transparent;
+
+    border-bottom: 10px solid white;
+
+    position: absolute;
+    top: -10px;
+    right: 35px;
+}
+
+/* toolbar search */
+
+.dashboard-toolbar__search {
+    display: inline-block;
+    color: #656667;
+}
+
+.dashboard-toolbar__search__control {
+    background: #fff;
+}
+
+
