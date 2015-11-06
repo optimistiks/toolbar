@@ -45,7 +45,6 @@
     "react/jsx-uses-react": 1,
     "react/forbid-prop-types": 1,
     "react/jsx-boolean-value": 1,
-    "react/jsx-closing-bracket-location": 1,
     "react/jsx-curly-spacing": 1,
     "react/jsx-indent-props": 1,
     "react/jsx-max-props-per-line": [
@@ -62,7 +61,6 @@
     "react/no-did-update-set-state": 1,
     "react/no-direct-mutation-state": 1,
     "react/no-multi-comp": 1,
-    "react/no-set-state": 1,
     "react/no-unknown-property": 1,
     "react/prefer-es6-class": 0,
     "react/react-in-jsx-scope": 1,

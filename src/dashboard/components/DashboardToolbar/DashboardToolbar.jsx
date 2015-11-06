@@ -1,10 +1,42 @@
 import React from 'react';
+import fullScreen from '../../../common/modules/app-fullscreen/index';
 import DashboardIcon from '../DashboardIcon/DashboardIcon.jsx';
 
 
 class DashboardToolbar extends React.Component {
 
+    constructor(props) {
+        super(props);
+        this.state = {fullScreen: false};
+        this.handleFsAttain = this.handleFsAttain.bind(this);
+        this.handleFsRelease = this.handleFsRelease.bind(this);
+    }
 
+    componentWillMount() {
+
+        fullScreen.on('attain', this.handleFsAttain);
+        fullScreen.on('release', this.handleFsRelease);
+
+    }
+
+    componentWillUnmount() {
+
+        fullScreen.removeListener('attain', this.handleFsAttain);
+        fullScreen.removeListener('release', this.handleFsRelease);
+
+    }
+
+    handleFsAttain() {
+        this.setState({fullScreen: true});
+    }
+
+    handleFsRelease() {
+        this.setState({fullScreen: false});
+    }
+
+    toggleExpand() {
+        fullScreen.target() ? fullScreen.release() : fullScreen.request();
+    }
 
     render() {
         return (<div className="dashboard-toolbar">
@@ -22,7 +54,9 @@ class DashboardToolbar extends React.Component {
                 </div>
 
                 <DashboardIcon iconId="play" mod="disabled"/>
-                <DashboardIcon iconId="expand" mod="disabled"/>
+                <span onClick={this.toggleExpand}>
+                    <DashboardIcon iconId={this.state.fullScreen ? 'reduce' : 'expand'} mod="disabled"/>
+                </span>
                 <div className="dashboard-toolbar__control-group">
                     <DashboardIcon iconId="text_editor" mod="green"/>
                     <DashboardIcon iconId="shape_pane" mod="disabled"/>
