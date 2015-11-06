@@ -99,6 +99,7 @@
 .dashboard-toolbar__search {
     display: inline-block;
     color: #656667;
+    margin: 0 20px;
 }
 
 .dashboard-toolbar__search__control {
