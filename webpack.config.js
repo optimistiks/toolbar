@@ -22,7 +22,8 @@ module.exports = {
                 loader: 'babel',
                 query: {presets: ['react', 'stage-1', 'es2015'], cacheDirectory: true}
             },
-            {test: /\.css$/, loader: 'style!css'}
+            {test: /\.css$/, loader: 'style!css'},
+            {test: /\.(woff|eot|ttf|svg)$/, loader: 'url-loader?limit=100000'}
         ]
     },
     eslint: {

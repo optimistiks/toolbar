@@ -1,11 +1,14 @@
+import '../../styles/styles.css';
+
 import React from 'react';
+import DashboardToolbar from '../DashboardToolbar/DashboardToolbar.jsx';
 
 
 class DashboardPage extends React.Component {
 
     render() {
         return (<div>
-            <h2>Dashboard</h2>
+            <DashboardToolbar />
         </div>);
     }
 

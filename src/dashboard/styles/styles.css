@@ -1,0 +1,45 @@
+.dashboard-toolbar {
+    height: 50px;
+    line-height: 40px;
+    background: #313233;
+    box-sizing: border-box;
+    padding: 5px;
+}
+
+.dashboard-toolbar__logo {
+    height: 100%;
+}
+
+.dashboard-toolbar__icon {
+    cursor: pointer;
+    margin: 0 5px;
+}
+
+.dashboard-toolbar__icon_disabled_yes {
+    color: #656667
+}
+
+.dashboard-toolbar__icon_green_yes {
+    color: #D5E739
+}
+
+.dashboard-toolbar__icon_blue_yes {
+    color: #5DABC6
+}
+
+.dashboard-toolbar__controls {
+    float: right;
+    font-size: 1.5em;
+    height: 100%;
+}
+
+.dashboard-toolbar__main-controls {
+    display: inline-block;
+}
+
+.dashboard-toolbar__control-group {
+    display: inline-block;
+    border-left: 2px solid #656667;
+    margin-left: 15px;
+    padding-left: 15px;
+}
