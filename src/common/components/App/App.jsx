@@ -1,5 +1,6 @@
 import 'normalize.css';
 import '../../styles/icons.css';
+import '../../styles/styles.css';
 import React from 'react';
 
 

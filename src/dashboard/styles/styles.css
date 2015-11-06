@@ -4,6 +4,7 @@
     background: #313233;
     box-sizing: border-box;
     padding: 5px;
+    position: relative;
 }
 
 .dashboard-toolbar__logo {
@@ -42,4 +43,25 @@
     border-left: 2px solid #656667;
     margin-left: 15px;
     padding-left: 15px;
+}
+
+.dashboard-toolbar__dropdown {
+    position: absolute;
+    right: 10px;
+    padding: 10px;
+    top: 50px;
+    line-height: 2em;
+    box-shadow: 0 3px 6px rgba(49, 50, 51, 0.24);
+}
+
+.dashboard-toolbar__dropdown_visible_no {
+    display: none;
+}
+
+.dashboard-toolbar__dropdown__text {
+    color: #313233;
+}
+
+.dashboard-toolbar__dropdown__link:hover {
+    color: #5DABC6
 }

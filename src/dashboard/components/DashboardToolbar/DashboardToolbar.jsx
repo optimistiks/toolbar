@@ -1,15 +1,23 @@
 import React from 'react';
 import fullScreen from '../../../common/modules/app-fullscreen/index';
 import DashboardIcon from '../DashboardIcon/DashboardIcon.jsx';
+import DashboardDropdown from '../DashboardDropdown/DashboardDropdown.jsx';
 
 
 class DashboardToolbar extends React.Component {
 
     constructor(props) {
+
         super(props);
-        this.state = {fullScreen: false};
+
+        //set initial state
+        this.state = {fullScreen: false, dropdown: false};
+
+        //bind event handlers to class instance
         this.handleFsAttain = this.handleFsAttain.bind(this);
         this.handleFsRelease = this.handleFsRelease.bind(this);
+        this.toggleDropdown = this.toggleDropdown.bind(this);
+        
     }
 
     componentWillMount() {
@@ -36,6 +44,10 @@ class DashboardToolbar extends React.Component {
 
     toggleExpand() {
         fullScreen.target() ? fullScreen.release() : fullScreen.request();
+    }
+
+    toggleDropdown() {
+        this.setState({dropdown: !this.state.dropdown});
     }
 
     render() {
@@ -65,12 +77,17 @@ class DashboardToolbar extends React.Component {
                 <div className="dashboard-toolbar__control-group">
                     <DashboardIcon iconId="comment" mod="disabled"/>
                     <DashboardIcon iconId="share" mod="disabled"/>
-                    <DashboardIcon iconId="user" mod="blue"/>
+                    <span onClick={this.toggleDropdown}>
+                        <DashboardIcon iconId="user" mod="blue"/>
+                    </span>
                     <DashboardIcon iconId="guide" mod="blue"/>
                 </div>
 
 
             </div>
+
+            <DashboardDropdown visible={this.state.dropdown} />
+
         </div>);
     }
 
